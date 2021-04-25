@@ -5,9 +5,19 @@
 </head>
 <script type="text/javascript">
 
-	
+	function DisplayPi(){
+		Input = document.getElementById("InputBox").value;
+			let pi = Math.PI;
+			PiString = pi.toString();
+			newString = PiString.slice(0, Input);
+			console.log(newString);
+			document.getElementById("Replace").innerHTML = newString;
+		
+	}
 </script>
 <body>
 <input type="text" id="InputBox" value="Insert Number"> </input>
+<button onclick="DisplayPi()">Push</button>
+<p id="Replace">Will be replaced by Pi</p>
 </body>
 </html>
